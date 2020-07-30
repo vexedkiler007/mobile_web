@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>House Rules</title>
+</head>
+<link rel='stylesheet' href={{url_for('static', filename='style.css')}} >
+<body>
+
+<div class="overlay_title">House Rules<button class="button_add"></button></div>
+    {%  for rule in rules %}
+        <div class="container">
+            <div class = "rules_inner">{{ rule.rule  }}</div>
+            <div class="overlay">
+                <div class="text"><p>{{ rule.author }}</p></div>
+            </div>
+        </div>
+    {% endfor %}
+</body>
+</html>
